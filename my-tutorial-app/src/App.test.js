@@ -2,8 +2,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders `Next player` text', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const nextPlayerTextElement = getByText(/Next player/i);
+  const initialGameBtnElement = getByText(/Go to game start/i);
+  expect(nextPlayerTextElement).toBeInTheDocument();
+  expect(initialGameBtnElement).toBeInTheDocument();
 });
